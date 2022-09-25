@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+:root {
+
+--Red: hsl(0, 100%, 74%); 
+--Green: hsl(154, 59%, 51%);
+
+--Blue: hsl(248, 32%, 49%);
+--DarkBlue: hsl(249, 10%, 26%);
+--GrayishBlue: hsl(246, 25%, 77%); 
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    display: flex;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
+
+    background: url(images/bg-intro-desktop.png), var(--Red) no-repeat center center;
+}
+
+.heading-container {
+    color: white;
+    max-width: 35em;
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+.subscription-box {
+    background: var(--Blue);
+    padding: 1rem 3rem 1rem 2rem;
+    color: white;
+    font-size: .8rem;
+    margin-bottom: 1rem;
+    border-radius: .5rem;
+    text-align: center;
+}
+
+span {
+    font-weight: 600;
+}
+
+.subscription-box:hover {
+    cursor: pointer;
+    transform: scale(1.03);
+}
+
+.form-box {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    padding: 2rem;
+    background: white;
+    border-radius: .5rem;
+}
+
+input {
+    padding: 1rem 3rem 1rem 2rem;
+    border-radius: .5rem;
+    border: lightgrey 1px solid;
+    
+}
+
+input:focus {
+    border: 2px solid black;
+}
+
+.submit-btn {
+    padding: 1rem 3rem 1rem 2rem;
+    border-radius: .5rem;
+    background: var(--Green);
+    border: none;
+    color: white;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.submit-btn:hover {
+    cursor: pointer;
+    transform: scale(1.03);
+    background: hsl(154, 59%, 65%);
+    transition: 150ms ease;
+}
+
+strong {
+    color: var(--Red);
+}
+strong:hover {
+    cursor: pointer;
+    color: hsl(0, 100%, 40%);
+}
+
+/* ----------Error messages---------- */
+.error-message {
+    margin: 0;
+    font-size: .7rem;
+    color: var(--Red);
+    display: none;
+    text-align: right;
+}
+.wrong-email {
+    margin: 0;
+    color: var(--Red);
+    font-size: .7rem;
+    display: none;
+    text-align: right;
+}
+
+.toggle-error {
+    display: block;
+}
+
+.error-border {
+    background: url(images/icon-error.svg) 95% center no-repeat;
+    border: 1px solid var(--Red);
+}
+
+
+/* --------MEDIA QUERIES--------- */
+@media (max-width:1050px) {
+    body {
+        flex-wrap: wrap;
+        
+    }
+
+    .heading-container {
+        text-align: center;
+    }
+
+    
+}
